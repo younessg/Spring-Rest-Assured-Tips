@@ -1,0 +1,54 @@
+@Resource
+@PostConstruct
+@Component
+@Autowired
+@Configuration
+@ComponentScan
+@Primary
+@Aspect -> AOP
+@Bean
+@Value
+@PropertySource
+@Slf4j
+@Service
+@Scope("prototype")
+@Inherited
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.TYPE })
+@AgentAnnotation
+@Module
+
+jdbc.url=jdbc:mysql://localhost/test
+jdbc.username=user
+jdbc.password=userpass
+
+@Autowired
+UserRepository (@Value("${jdbc.url}") String url,
+                @Value("${jdbc.usersame}") String username,
+                @Value("${jdbc.password}") String password) {
+// initalize the UserRepository object 
+// using supplied JDBC properties
+}
+}
+
+Spring core annotations
+
+<context:component-scan base-package=""></context:component-scan>
+Annotation Based Configuration
+Java Based Configuration
+
+https://crunchify.com/spring-mvc-how-to-declare-a-bean-in-spring-application/
+
+Spring JDBC Tutorial - with Examples
+https://www.youtube.com/watch?v=1WgsDP10iqw&list=PLBBog2r6uMCRgkxM4xQeUV2A3A35_s9J3&index=4
+
+Rest Assured Tutorial 
+https://www.swtestacademy.com/rest-assured-tutorial-api-testing/
+
+
+TO DO
+=====
+git bucket
+rest assured
+intelij
+manual
